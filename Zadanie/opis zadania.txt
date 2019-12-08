@@ -1,0 +1,19 @@
+W pliku dane.csv znajdują się dane z transakcji klientów wraz z ich profitem z transakcji (profit), wolumenem na transakcji (closed_volume), stroną transakcji (side) oraz datę rejestracji klienta (reg_date).
+
+Zadania:
+1) Wczytać plik csv.
+2) Znaleźć client_id, closed_volume oraz reg_date dla transakcji, na której był największy profit.
+3) Stworzyć nową tabelę z pogrupowanymi danymi. Kolejne kolumny to:
+- client_id
+- suma profitu danego klienta
+- średni wolumen na transakcji
+- liczba transakcji klienta
+- data rejestracji klienta
+
+przykładowy wiersz: [client_id, sum(profit), avg(closed_volume), reg_date] = [123156, 1235, 111, 1500000000000]
+
+4) Stworzyć zmienną reg_date_bin, która przyjmuje 1 gdy data rejestracji jest większa niż 1515000000000 i 0 w przeciwnym przypadku.
+5) Stworzyć model regresji liniowej, gdzie zmienną zależną będzie suma profitu, a niezależną średni wolumen, liczba transakcji oraz binarna zmienna reg_date_bin (w modelu uwzględnić stałą). Sprawdzić istotność zmiennych.
+6) Sprawdzić dopasowanie modelu do danych za pomocą jeden (dowolnie wybranej) miary.
+7) Dopasować rozkład normalny do zmiennej profit w pierwotnym pliku dane (polecamy utworzyć obiekt norm z pakietu scipy.stats, dla rozjaśnienia sytuacji polecamy również wykonać histogram profitu z transakcji).
+Na tej podstawie policzyć prawdopodobieństwo, że profit z transakcji będzie większy niż 1000. 
