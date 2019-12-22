@@ -3,7 +3,7 @@
 """
 This program sends randomly generated data to a fake goverment website (phishing scammers).
 
-SMS:
+SMS received:
 HMRC Have determined that you are eligible for a tax rebate of £228.88. 
 Press the link to get started. 
 https://gov.uk-auth-c58.com/account

@@ -29,3 +29,4 @@ def movearound():
 
 #displaypos()
 movearound()
+#spam_messages()
