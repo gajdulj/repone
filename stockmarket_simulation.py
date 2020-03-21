@@ -3,7 +3,7 @@
 """
 Created on Sun Aug 19 20:41:52 2018
 
-@author: Kuba
+@author: Jakub Gajdul
 """
 import random as rd
 import time
