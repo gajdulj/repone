@@ -37,17 +37,23 @@ def generate_data():
     secode = random.randint(150,750)
     account = rand_x_digit_num(8)
     sortcode = str('0')+str(random.randint(1,9))+'-'+str(random.randint(1,9))+ str('0')+'-'+str(random.randint(11,55))
-    print ('Insert {}: '.format(number+1)+ccname,ccno,ccexp,secode,account,sortcode)
+    data = [ccname,ccno,ccexp,secode,account,sortcode]
+    print ('Insert {}: '.format(number+1))
+    print (data)
+    return data
 
 for number in range (1000):
-    generate_data()
+    data = generate_data()
+    #Website was blocked already.
+    """
     requests.post(url,allow_redirects = False, data ={
         'tes': r'csrfToken,user_id,password,profile:6180403181099740681::Z7PJmvIbwqpEkYXuwErxkhl6/47IiqWuUIG089Fk/n9Rs34jIFTbTGzC3cNDsii8GVso7bwbKSw3KI/uEjS7Ag==',
         'csrfToken': r'60e95235e20c5eed27a06f25a9f99e782833a652\\-1553630837725-185ce4b4a7e1ecf38c2b8b1a',
-        'ccname': ccname,
-        'ccno': ccno,
-        'ccexp': ccexp,
-        'secode': secode,
-        'account': account,
-        'sortcode': sortcode
+        'ccname': data[0],
+        'ccno': data[1],
+        'ccexp': data[2],
+        'secode': data[3],
+        'account': data[4],
+        'sortcode': data[5]
     })
+    """

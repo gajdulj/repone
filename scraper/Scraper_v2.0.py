@@ -22,23 +22,9 @@ print ("This program will download the prices of certain products for the follow
 for retailer in retailers:
     print (retailer)
     
-    
-
-'''
-class webscraper (self, name):
-    
-    def __init__(self, starting_link, number of pages):
-        self.starting_link = starting link
-        self._y = y
-  '''      
-        
-    
-
-
 res = requests.get('https://www.electro.pl/search?query[menu_item]=&query[querystring]=beurer')
 res.raise_for_status()
 soup = bs4.BeautifulSoup(res.text,"html.parser")
-
 
 no_pages_raw = "body > div.c-layout.v-product.v-product_list.is-classic > div.c-layout_row.c-layout_item.is-main.is-container > div.c-layout_col.c-layout_item.is-content > div:nth-child(1) > div.c-toolbar_item.is-pagination > form > span.is-total"
 no_pages = no_pages_raw.replace("nth-child", "nth-of-type")
