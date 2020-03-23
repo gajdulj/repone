@@ -1,1 +1,1 @@
-<div align="center"> :fire: ##This is a repository with a mix of a random Python projects :fire: </div>
+##<div align="center"> This is a repository with a mix of a random Python projects :wrench: </div>
