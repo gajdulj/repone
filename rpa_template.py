@@ -4,6 +4,8 @@ This script is a template for creating simple RPA apps.
 """
 import time
 import pyautogui
+import sys
+import random
 
 def type_messages():
     time.sleep(3)
@@ -20,13 +22,21 @@ def displaypos():
 def keep_active():
     time.sleep(1)
     while True:
-        pyautogui.moveTo(x=300, y=300, duration=0.5)
+        noise=random.randint(-20, 20)
+        pyautogui.click(clicks=3,interval=1)
+        pyautogui.move(noise,-50, duration=0.5)
         time.sleep(3)
-        pyautogui.moveTo(x=700, y=300, duration=0.5)
+        pyautogui.click(clicks=3,interval=1)
+        pyautogui.move(-(noise),50, duration=0.5)
         time.sleep(3)
 
 # This will prevent screen from locking    
-keep_active()
+print('Press Ctrl-C to quit.')
+try:
+    while True:
+        keep_active()
+except KeyboardInterrupt:
+    print ('\n')
 
 # To see current mouse position use below
 # displaypos()
